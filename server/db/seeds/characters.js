@@ -56,7 +56,7 @@ exports.seed = function (knex) {
         { 
           id: 9, 
           name: 'Vegeta', 
-          power: 0,
+          power: 15000,
           image: 'https://media0.giphy.com/media/thZQwkCyXSmelSTWru/giphy.gif',
         },
         { 
