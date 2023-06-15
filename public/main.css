@@ -6,12 +6,61 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fpng-cixik&psig=AOvVaw0Mqsu1d37tE-aG5SkjqlIe&ust=1686896071152000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJDw6NvPxP8CFQAAAAAdAAAAABAI");
+  background-image: url("/battle.webp");
   background-size: 30% auto;
   background-repeat: no-repeat;
   background-position: right bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: -2;
+}
+
+.centeredContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  z-index: -1;
+  width: 500px; 
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-top: -250px;
+  margin-bottom: -130px;
+}
+
+.titleLogo {
+  width: 700px; 
+  height: auto;
  
-  
+}
+
+.textInputContainer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.textInput {
+  width: 300px; 
+  height: 40px; 
+  border-radius: 10px; 
+  text-align: center; 
+  font-size: 18px;
+}
+
+
+
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem; 
 }
 
 /* ------------------button------------------------ */
@@ -24,7 +73,7 @@
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 2.5;
   outline: transparent;
@@ -44,4 +93,15 @@
 
 .generator-button:not([disabled]):hover {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+/* -------------AUDIO------------ */
+.audioContainer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

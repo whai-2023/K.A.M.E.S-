@@ -4,6 +4,8 @@ import * as db from '../db/db'
 
 const router = Router()
 
+//server = /api/v1
+
 router.get('/', async (req, res) => {
   try {
     const fruits = await db.getAllFruits()

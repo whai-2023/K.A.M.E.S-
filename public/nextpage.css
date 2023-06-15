@@ -1,0 +1,31 @@
+.nextpageContainer {
+    color: black;
+    background-color: #f0833a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: -2;
+  }
+
+  .name {
+    font-size: 60px;
+  }
+
+  .randomPower {
+    font-size: 60px;
+  }
+
+  .randomPowerValue {
+    font-size: 68px;
+    color: yellow;
+    text-shadow: 0 0 5px yellow, 0 0 10px red, 0 0 20px red;
+    
+  }
