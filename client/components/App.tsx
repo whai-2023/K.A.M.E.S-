@@ -26,6 +26,7 @@ function App() {
             className="textInput"
             value={name}
             onChange={(event) => setName(event.target.value)} 
+            required
           />
         </div>
 
