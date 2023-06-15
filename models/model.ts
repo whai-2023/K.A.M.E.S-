@@ -4,3 +4,11 @@ export interface Characters {
   power: number
   image: string
 }
+
+export interface Character {
+  id: number
+  name: string
+  power: number
+  image: string
+
+}

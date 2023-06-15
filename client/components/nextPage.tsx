@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { getCharacters } from '../api'
+import { Character } from '../../models/model'
 
 function NextPage() {
 
@@ -12,7 +13,7 @@ function NextPage() {
   const charactersQuery = useQuery(['characters'], () => getCharacters())
   console.log(charactersQuery.data)
 
-  const characters = charactersQuery.data
+  const characters  = charactersQuery.data as unknown as Character[]
 
   const characterBelow = characters?.filter(character => character.power <=randomPower)
   const characterAbove = characters?.find(character => character.power >randomPower)
