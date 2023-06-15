@@ -1,12 +1,11 @@
-
-
+import { Link } from 'react-router-dom'
 function App() {
-  // const { data } = useFruits()
-
   return (
     <>
-      <div className="app">
-        <h1>Hi</h1>
+      <div>
+        {/* <Link to="/"> */}
+        <button className="generator-button">Generate Your Power Level</button>
+        {/* </Link> */}
       </div>
     </>
   )
