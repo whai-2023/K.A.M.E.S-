@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
 function App() {
   return (
-    <>
-      <div>
-        {/* <Link to="/"> */}
-        <button className="generator-button">Generate Your Power Level</button>
+    <div className="backgroundContainer">
+      
+        {/* <Link to="/nextPage"> */}
+          <button className="generator-button">Generate Your Power Level</button>
         {/* </Link> */}
-      </div>
-    </>
+    
+    </div>
   )
 }
 

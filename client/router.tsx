@@ -1,4 +1,4 @@
-// import UserName from './components/userName/userName'
+import NextPage from './components/nextPage'
 
 
 import {
@@ -11,8 +11,8 @@ import App from './App'
 
 export const routes = createRoutesFromElements(
   <Route path="/">
-    {/* <Route path="/username" element={<UserName />} /> */}
       
+    <Route path="/nextPage" element={<NextPage />} />
     <Route path="/" element={<App />} />
   
     
