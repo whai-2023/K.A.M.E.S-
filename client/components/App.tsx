@@ -35,9 +35,9 @@ function App() {
           </Link>
         </div>
 
-        {/* <div className="audioContainer">
+        <div className="audioContainer">
           <audio src="/dbz.mp3" autoPlay controls/>
-        </div> */}
+        </div>
       </div>
       
     </div>
