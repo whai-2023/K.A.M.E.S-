@@ -31,14 +31,17 @@ function App() {
         </div>
 
         <div className="buttonContainer">
-          <Link to={`/nextPage/${name}`}>
-            <button className="generator-button">Generate Your Power Level</button>
-          </Link>
+          {name && (
+            <Link to={`/nextPage/${name}`}>
+              <button className="generator-button">Generate Your Power Level</button>
+            </Link>
+          )
+          } 
         </div>
-
-        <div className="audioContainer">
+        
+        {/* <div className="audioContainer">
           <audio src="/dbz.mp3" autoPlay controls/>
-        </div>
+        </div> */}
       </div>
       
     </div>
