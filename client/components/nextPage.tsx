@@ -23,9 +23,12 @@ function NextPage() {
 
   return (
     <div className="nextpageContainer">
-      <div className="name">
-        <h1>Hi {name}</h1>
-      </div>
+
+      
+      <h1 className="name">
+        Hi { name }
+      </h1>
+
 
       <div className="randomPower">
         <h2>
