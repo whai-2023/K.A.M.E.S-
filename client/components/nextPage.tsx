@@ -11,9 +11,9 @@ function NextPage() {
   return (
     <div className="nextpageContainer">
       
-      <div className="name">
+      <h1 className="name">
         Hi { name }
-      </div>
+      </h1>
 
       <div className="randomPower">
         Your power is: &nbsp;
