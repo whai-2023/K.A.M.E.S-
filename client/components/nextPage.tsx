@@ -4,53 +4,63 @@ import { getCharacters } from '../api'
 import { Character } from '../../models/model'
 
 function NextPage() {
-
   const { name } = useParams()
   console.log(name)
 
-  const randomPower = (Math.random() * (44999 - 0.0001)) + 0.0001
+  const randomPower = Math.random() * (44999 - 0.0001) + 0.0001
 
   const charactersQuery = useQuery(['characters'], () => getCharacters())
   console.log(charactersQuery.data)
 
-  const characters  = charactersQuery.data as unknown as Character[]
+  const characters = charactersQuery.data as unknown as Character[]
 
-  const characterBelow = characters?.filter(character => character.power <=randomPower)
-  const characterAbove = characters?.find(character => character.power >randomPower)
+  const characterBelow = characters?.filter(
+    (character) => character.power <= randomPower
+  )
+  const characterAbove = characters?.find(
+    (character) => character.power > randomPower
+  )
 
   return (
     <div className="nextpageContainer">
+
       
       <h1 className="name">
         Hi { name }
       </h1>
 
+
       <div className="randomPower">
-        Your power is: &nbsp;
-        <span className="randomPowerValue">{randomPower.toFixed(4)}</span>
+        <h2>
+          Your power is: &nbsp;
+          <span className="randomPowerValue">{randomPower.toFixed(4)}</span>
+        </h2>
       </div>
 
-      
-          <div className="canBeat">
-            You can beat:
-            {characterBelow && characterBelow.map((character, index) => (
-              <div key={index} >
-               {character.name} - {character.power} <img src={character.image} alt={character.name}></img> 
-              </div>
-            ))}
-          </div>
-
-          <div className="cannotBeat">
-           But you cannot beat:
-            {characterAbove && (
-            <div >
-             {characterAbove.name} - {characterAbove.power} <img src={characterAbove.image} alt={characterAbove.name}></img> 
+      <div className="canBeat">
+        <h3>You can beat:</h3>
+        {characterBelow &&
+          characterBelow.map((character, index) => (
+            <div key={index}>
+              <p>
+                {character.name} - {character.power}{' '}
+              </p>
+              <img src={character.image} alt={character.name}></img>
             </div>
-            )}
-          </div>
-        
-    
+          ))}
+      </div>
 
+      <div className="cannotBeat">
+        <h3>But you cannot beat:</h3>
+        {characterAbove && (
+          <div>
+            <p>
+              {characterAbove.name} - {characterAbove.power}{' '}
+            </p>
+            <img src={characterAbove.image} alt={characterAbove.name}></img>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
