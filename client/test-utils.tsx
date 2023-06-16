@@ -5,6 +5,7 @@ import matchers, {
 } from '@testing-library/jest-dom/matchers'
 import { RouterProvider, createMemoryRouter } from 'react-router-dom'
 import { routes } from './router'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 beforeEach(cleanup)
 expect.extend(matchers)
@@ -22,5 +23,23 @@ export function renderRoute(location: string) {
   const router = createMemoryRouter(routes, {
     initialEntries: [location],
   })
-  render(<RouterProvider router={router} />)
+
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: false,
+      },
+    },
+    logger: {
+      log: console.log,
+      warn: console.warn,
+      error: () => {},
+    },
+  })
+
+  render(
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  )
 }
