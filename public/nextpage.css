@@ -29,3 +29,15 @@
     text-shadow: 0 0 5px yellow, 0 0 10px red, 0 0 20px red;
     
   }
+
+  img {
+    height: 50px
+  }
+
+  .canBeat {
+    background-color: green;
+  }
+
+  .cannotBeat {
+    background-color: red;
+  }

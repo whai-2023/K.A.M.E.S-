@@ -1,6 +1,6 @@
 import connection from './connection'
-import { Fruit } from '../../models/model'
+import { Characters } from '../../models/model'
 
-export function getAllFruits(db = connection): Promise<Fruit[]> {
-  return db('fruit').select()
+export function getCharacters(db = connection): Promise<Characters[]> {
+  return db('whatever').select()
 }
